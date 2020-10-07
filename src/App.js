@@ -1,26 +1,45 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Menu from "./сomponents/ Menu";
+import HumbergerMenu from './сomponents/HumbergerMenu';
+import HeaderBtn from "./сomponents/HeaderBtn";
+import Carousel from "./сomponents/Carousel";
+import CategoriesSpad from "./сomponents/CategoriesSpad";
+import CategoriesPost from "./сomponents/CategoriesPost";
+import Footer from "./сomponents/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<>
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <div className="humberger__menu__overlay"></div>
+  <HumbergerMenu/>
+
+  <header class="header">
+    <Menu/>
+    <HeaderBtn/>
+  </header>
+
+
+  <section class="hero">
+      <Carousel/>
+  </section>
+
+
+  <section class="categories spad">
+    <CategoriesSpad/>
+    <CategoriesPost/>
+  </section>
+
+
+    <Footer/>
+</>
+ );
+
 }
 
 export default App;
